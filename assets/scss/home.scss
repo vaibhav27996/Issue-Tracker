@@ -1,0 +1,101 @@
+.card{
+    
+    height: auto;
+    margin-top: 20px;
+
+    .card-header{
+        background-color: #292e4a;
+        color: white;
+
+
+        .project-name{
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #00fff3;
+        }
+
+        button a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .card-body{
+        color: #292e4a;
+        font-size: 17px;
+        font-weight: 700;
+
+        i{
+            padding: 6px;
+            font-size: 19px;
+            color: #95c9ff;
+        }
+        
+        .table-height{
+            height: 23rem;
+            overflow-y: scroll;
+            width: 103%;
+            margin-left: -16px;
+            margin-top: -11px;
+            margin-right: 7px;
+        }
+
+        /* width */
+        .table-height::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        /* Track */
+        .table-height ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+        }
+        
+        /* Handle */
+        .table-height::-webkit-scrollbar-thumb {
+            background: #765555;
+            border-radius: 10px;
+        }
+        
+        /* Handle on hover */
+        .table-height::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+        }
+        
+        button a{
+            color: white;
+            text-decoration: none;
+        }
+
+        input,textarea,select{
+            margin-top: 10px;
+            width: 100%;
+
+            button .btnStyle{
+                margin-top: 1px;
+            }
+        }
+
+        .formBtn{
+            margin-top: 10px;
+            width: 100%;
+        }
+
+
+        
+
+        
+        .select2-selection__choice{
+            font-size: 14px;
+             color: #482d2d;
+
+            .select2-selection__choice__remove{
+                float: right;
+                font-size: 15px;
+                padding-left: 10px;
+            }
+            
+
+        }
+    }
+}

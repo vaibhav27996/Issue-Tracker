@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #292e4a;
+
+    .navbar-brand{
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        padding-left: 13px;
+    }
+
+    .link-color{
+        color: white !important;
+    }
+}
+
+.links-right{
+    justify-content: end;
+
+    li a{
+        color: white;
+    }
+}
