@@ -1,7 +1,7 @@
 const Project=require('../models/project');
 const ProjectIssue=require('../models/project_issue');
 
-const env=require('../config/environment');
+//const env=require('../config/environment');
 
 //home page
 module.exports.home=async function(req,res){
