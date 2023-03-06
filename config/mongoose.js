@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const env=require('./environment');
- mongoose.connect(`mongodb://127.0.0.1:27017/${env.db}`);
+mongoose.connect(`mongodb://localhost/${env.db}`);
 
 // mongoose.connect(`${process.env.MONGO_URl}`, {useNewUrlParser: true, useUnifiedTopology: true}, ()=>{
-//     console.log("mongodb is connected")
+//     console.log("mongodb is connected");
 // });
 
 const db = mongoose.connection;
