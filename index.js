@@ -1,5 +1,5 @@
+require('dotenv').config();
 const express = require('express');
-const env=require('./config/environment');
 const app = express();
 const port = process.env.PORT || 3000;
 const expressLayouts = require('express-ejs-layouts');
@@ -7,8 +7,6 @@ const db = require('./config/mongoose');
 
         
 const session = require('express-session');
-
-
 
 const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
@@ -25,8 +23,8 @@ app.use(session({
   
 
 app.use(sassMiddleware({
-    src: path.join(__dirname, env.asset_path, '/scss'),
-    dest: path.join(__dirname, env.asset_path, '/css'),
+    src: path.join(__dirname, './assets', '/scss'),
+    dest: path.join(__dirname, './assets', '/css'),
     debug: true,
     outputStyle: 'extended',
     prefix: '/css'
@@ -34,7 +32,7 @@ app.use(sassMiddleware({
 
 app.use(express.urlencoded({extended:false}));
 
-app.use(express.static(env.asset_path));
+app.use(express.static('./assets'));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout

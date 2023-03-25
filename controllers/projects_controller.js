@@ -1,7 +1,7 @@
 const Project=require('../models/project');
 const ProjectIssue=require('../models/project_issue');
+const issue_array_list=['UI','Documentation','Bug','Database','Css','Js','Github','File Upload'];
 
-const env=require('../config/environment');
 var projectIds;
 //create new project
 module.exports.createProject=async function(req,res){
@@ -109,7 +109,7 @@ module.exports.projectIssuePage=async function(req,res){
         return res.render('project_issue_page',{
             title:'Issue Page',
             projectId:projectId,
-            issue_arr:env.issue_array,
+            issue_arr:issue_array_list,
             projectIssueList:projectIssueList,
             issueArr:issueArr,
             issueTitle:issueTitle,
