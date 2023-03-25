@@ -5,17 +5,11 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 const expressLayouts = require('express-ejs-layouts');
-
-
-        
 const session = require('express-session');
-
+const path=require('path');
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
-
-const path=require('path');
- 
 app.use(session({
     secret:'flashblog',
     saveUninitialized: true,
