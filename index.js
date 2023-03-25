@@ -4,14 +4,29 @@ const db = require('./config/mongoose');
 const port = process.env.PORT || 3000;
 const app = express();
 
-const path=require('path');
 const expressLayouts = require('express-ejs-layouts');
+
+
+        
+const session = require('express-session');
+
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
+
+const path=require('path');
+ 
+app.use(session({
+    secret:'flashblog',
+    saveUninitialized: true,
+    resave: true
+}));
+  
+
+
 app.use(express.urlencoded({extended:false}));
 
-app.use(express.static('assets'));
+app.use(express.static('./assets'));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout
